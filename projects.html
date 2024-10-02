@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Projects</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body id="top">
+        <header>
+            <h1 class="h1-title">Welcome to My Website</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <nav aria-label="Breadcrumb">
+                    <span class="breadcrumb-item"><a href="index.html" class="crumb-text">Home</a></span>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-item styled">Projects</span>
+                </nav>
+            </section>
+            <section>
+                <h2>About This Project page</h2>
+                <p>This website showcases my skills, projects, and experiences. Explore the gallery to see my work, check out my projects, and feel free to get in touch!</p>
+            </section>
+            <section id="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li><strong>Programming Languages:</strong> Proficient in JavaScript, Python, and Java.</li>
+                    <li><strong>Web Development:</strong> Mastery of HTML, CSS, and frameworks like React and Angular.</li>
+                    <li><strong>Mobile App Development:</strong> Experience with Swift for iOS and Kotlin for Android.</li>
+                    <li><strong>Database Management:</strong> Skilled in working with SQL and NoSQL databases.</li>
+                    <li><strong>Version Control:</strong> Familiar with Git and GitHub for team collaboration.</li>
+                </ul>
+            </section>
+
+            <section id="experiences">
+                <h2>Experiences</h2>
+                <ul>
+                    <li><strong>Full-Stack Developer at Web For Everybody company:</strong> Developed and maintained web applications that enhanced user engagement and streamlined processes, contributing to a 30% increase in productivity.</li>
+                    <li><strong>Freelance Mobile App Developer:</strong> Created custom mobile applications for clients, from concept to deployment, ensuring high performance and user satisfaction.</li>
+                    <li><strong>Open Source Contributor:</strong> Actively contributed to several open-source projects, collaborating with global developers to improve software quality and functionality.</li>
+                </ul>
+            </section>
+
+            <section id="projects">
+                <h2>Project Descriptions</h2>
+                <article>
+                    <h3>Project A: Task Manager App</h3>
+                    <p><strong>Overview:</strong> A responsive web application designed to help users manage their tasks efficiently.</p>
+                    <p><strong>Technologies Used:</strong> React, Node.js, MongoDB.</p>
+                    <p><strong>Highlights:</strong> Implemented real-time notifications and user authentication, enhancing user experience and security.</p>
+                </article>
+                <article>
+                    <h3>Project B: Weather Forecast Mobile App</h3>
+                    <p><strong>Overview:</strong> An intuitive mobile application that provides real-time weather updates and forecasts.</p>
+                    <p><strong>Technologies Used:</strong> Swift, API integration, Core Data.</p>
+                    <p><strong>Highlights:</strong> Features a sleek UI/UX design, geolocation services, and offline capabilities.</p>
+                </article>
+                <article>
+                    <h3>Project C: E-commerce Website</h3>
+                    <p><strong>Overview:</strong> A fully functional e-commerce platform tailored for small businesses to reach a wider audience.</p>
+                    <p><strong>Technologies Used:</strong> Angular, Firebase, Stripe API.</p>
+                    <!--https://docs.stripe.com/api Considering to add links...-->
+                    <p><strong>Highlights:</strong> Integrated payment processing and user-friendly product management features, boosting sales by 25%.</p>
+                </article>
+            </section>
+            <section class="project-cards">
+                <h2>My Projects</h2>
+                <div class="cards-container">
+                    <div class="card">
+                        <h3>Project Task Manager App</h3>
+                        <img src="src/images/projects/Task-Manager-App.jpg" alt="Project Task Manager App">
+                        <p>A responsive web application designed to help users manage their tasks efficiently.</p>
+                        <a href="project1.html" class="button">View Project</a>
+                    </div>
+                    <div class="card">
+                        <h3>Project Weather Forecast Mobile App</h3>
+                        <img src="src/images/projects/Weather-Forecast-Mobile-App.jpg" alt="Project Weather Forecast Mobile App">
+                        <p>An intuitive mobile application that provides real-time weather updates and forecasts.</p>
+                        <a href="project2.html" class="button">View Project</a>
+                    </div>
+                    <div class="card">
+                        <h3>Project E-commerce Website</h3>
+                        <img src="src/images/projects/E-commerce-Website.jpg" alt="Project E-commerce Website">
+                        <p>A fully functional e-commerce platform tailored for small businesses to reach a wider audience.</p>
+                        <a href="project3.html" class="button">View Project</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer id="footer">
+            <div class="footer-content">
+                <ul class="footer-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="https://facebook.com"><img src="src/icons/socials/icons-facebook.png" alt="Facebook"></a>
+                    <a href="https://x.com"><img src="src/icons/socials/icons-twitterx.png" alt="Twitter X"></a>
+                    <a href="https://youtube.com"><img src="src/icons/socials/icons-youtube.png" alt="YouTube"></a>
+                </div>
+            </div>
+            <p>&copy; 2024 My Website. All rights reserved to me :)</p>
+        </footer>
+        <!-- Scroll Buttons -->
+        <!--<div class="scroll-buttons">-->
+        <!--    <button id="scrollToTop" class="scroll-button">Scroll to Top</button>-->
+        <!--    <button id="scrollToProjects" class="scroll-button">Scroll to Projects</button>-->
+        <!--</div>-->
+        <!--Opt 2-->
+        <!--<div class="scroll-buttons">-->
+        <!--    <a href="#top" class="scroll-button">Scroll to Top</a>-->
+        <!--    <a href="#projects" class="scroll-button">Scroll to Projects</a>-->
+        <!--</div>-->
+        <div class="scroll-buttons">
+            <a href="#top" class="scroll-button">
+                <img src="src/icons/arrow-top.png" alt="Scroll to top">
+            </a>
+
+            <a href="#footer" class="scroll-button">
+                <img src="src/icons/arrow-bottom.png" alt="Scroll to bottom">
+            </a>
+        </div>
+
+    </body>
+</html>

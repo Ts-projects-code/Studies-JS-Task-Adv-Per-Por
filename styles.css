@@ -1,0 +1,484 @@
+html, body {
+    font-family: Arial, sans-serif;
+    height: 100%; /* Make sure the html and body take full height */
+    margin: 0; /* Remove default margin */
+    scroll-behavior: smooth;
+}
+
+main {
+    flex: 1; /* Allow main content to grow and fill available space, to use the entire screen for example */
+    padding: 20px; /* Adding some padding for content */
+}
+
+body {
+    display: flex; /* Using flexbox for layout */
+    flex-direction: column; /* Stack children vertically, this means all the content */
+    background-color: #ffc0cc; /* Light pink background */
+    color: #0d420b; /* Dark green text */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #A04C4C; /* Dark red header */
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    /*    background-color: #A04C4C;*/
+    padding: 10px; /* Nav padding */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white; /* White text for navigation links */
+    text-decoration: none;
+    font-size: 16px;
+    /*    font-size: 1.2rem; !* Relative to the root font size *!*/
+    /*    font-size: 2vw;*/
+    padding: 10px;
+}
+
+nav a:hover {
+    color: #40e0d0; /* Here it changes link color on hover */
+}
+
+nav a.active {
+    font-weight: bold; /* Makes the active link bold */
+    color: #40e0d0; /* Change the active link color */
+}
+
+.breadcrumb {
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Centering items vertically */
+}
+
+.breadcrumb-item {
+    margin-right: 5px; /* Space between each of the items */
+}
+
+.breadcrumb-separator {
+    margin-right: 5px; /* Space after the separator */
+}
+
+.breadcrumb-item a {
+    color: #A04C4C; /* Color for the link as the nav above */
+    text-decoration: none; /* Removing any underline decoration */
+}
+
+.breadcrumb-item.styled {
+    font-weight: bold; /* Styled item bold */
+    color: #40e0d0; /* Different color for the styled item */
+}
+
+.crumb-text {
+    font-size: 16px;
+}
+
+.center-sec {
+    width: 25%;
+    margin: auto;
+    margin-top: 10%;
+}
+
+h1, h2 {
+    color: #A04C4C; /* Testing dark red for headings */
+}
+
+.h1-title {
+    color: #FFFFFF; /* Testing white for headings */
+}
+
+.button {
+    background-color: #40e0d0; /* Light blue for buttons, search buttons*/
+    color: #0d420b; /* Dark green text for buttons */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #A04C4C; /* Dark red on hover */
+    color: white; /* White text on hover */
+}
+
+
+footer {
+    background-color: #A04C4C; /* Dark red footer */
+    color: white; /* White text in footer */
+    text-align: center; /* Centre text */
+    padding: 20px; /* Add padding for footer */
+}
+
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 24px;
+    margin: 0 5px;
+}
+
+footer ul {
+    list-style-type: none; /* This removes bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+.footer-content {
+    display: flex; /* Aligns items in a row */
+    justify-content: space-between; /* Space between links and icons */
+    align-items: center; /* Vertically centers items */
+}
+
+.footer-links {
+    display: flex; /* Aligns links in a row */
+}
+.footer-links li {
+    margin: 0 10px; /* Space between links */
+}
+
+
+/*Gallery style  */
+
+
+.gallery {
+    padding: 20px;
+}
+
+.gallery-container {
+    display: grid; /* A grid layout for the gallery */
+    /*    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); !* Responsive columns *!*/
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 15px; /* Space between each item */
+}
+
+.gallery-item {
+    position: relative;
+    background-color: #f9f9f9; /* Card background color */
+    border: 1px solid #ddd; /* Border around the item */
+    border-radius: 5px; /* Rounded corners, can be changed to square*/
+    overflow: hidden; /* Clip overflow for large images for example*/
+    text-align: center; /* Center text */
+}
+
+.gallery-item::before {
+    content: ""; /* Required for pseudo-elements */
+    position: absolute; /* Position it absolutely within the gallery item */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Stretch to the right */
+    bottom: 0; /* Stretch to the bottom */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    opacity: 1; /* Start hidden */
+    transition: opacity 0.6s ease; /* Smooth transition for hover effect */
+    z-index: 1;
+}
+
+.gallery-item:hover::before {
+    opacity: 0.6; /* Showing overlay on hover */
+    bottom: 28px;
+}
+.gallery-item img {
+    display: block;
+    width: 100%; /* Responsive image */
+    height: auto; /* To maintain aspect ratio */
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item p {
+    display: flex;
+    align-items: center;
+    padding: 10px; /* Padding for description */
+    margin: 0; /* This removes the default margin */
+    /*    background-color: #fff;*/
+    position: relative;
+    z-index: 2;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover p {
+    background-color: #A04C4C;
+    color: white;
+    transform: scale(1.1);
+}
+
+.gallery-item a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.gallery-item a:hover {
+    text-decoration: underline;
+}
+
+.icon {
+    /*    margin-right: 12px;*/
+    margin-right: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+}
+
+
+/*Projects style*/
+.project-cards {
+    padding: 20px;
+}
+
+.cards-container {
+    display: flex; /* Flexbox for layout */
+    /*    justify-content: space-between;*/
+    justify-content: flex-start;
+    gap: 20px; /* Space between each card */
+}
+
+.card {
+    background-color: #f9f9f9; /* Card background color */
+    border: 1px solid #ddd; /* Border around the card */
+    border-radius: 5px; /* Rounded corners, to follow the one used in Gallery */
+    padding: 15px; /* Padding inside the card */
+    width: calc(33.333% - 20px); /* Adjust width for three cards in a row */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth effect on the cards*/
+    transition: box-shadow 0.3s ease-in-out;
+    transition: transform 0.2s; /* Smooth scale transition */
+}
+
+.card img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Match card corners */
+}
+
+.card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05); /* Scale up on hover for effect, when one wishes to zoom or see closer */
+}
+
+.card h3 {
+    margin: 0 0 10px; /* Margin for the title */
+}
+
+.card p {
+    margin: 0 0 15px; /* Margin for the description */
+}
+
+
+section:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+/*.gallery-item img {*/
+/*    display: block;*/
+/*    width: 100%; !* Responsive image *!*/
+
+
+.button {
+    display: inline-block; /* Make link look like a button */
+    padding: 10px 15px; /* Padding for the button */
+    background-color: #A04C4C; /* Button background color */
+    color: white; /* Button text color */
+    text-decoration: none; /* Remove underline for all the button texts */
+    border-radius: 5px; /* Rounded corners for button */
+}
+
+.button:hover {
+    background-color: #0d420b; /* Darker color on hover */
+}
+
+
+/*Scroll style*/
+
+.scroll-buttons {
+    position: fixed; /* Keep buttons fixed on the screen */
+    bottom: 20px; /* Position from the bottom */
+    right: 20px; /* Position from the right */
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px; /* Space between buttons */
+}
+
+.scroll-button {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay , or perhaps always visible?*/
+    border-radius: 50%; /* Make the button circular */
+    width: 50px; /* Fixed width */
+    height: 50px; /* Fixed height */
+    display: flex; /* Flexbox for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.scroll-button:hover {
+    background-color: #FFFFFF; /* Lighter shade on hover */
+}
+
+.scroll-button img {
+    width: 70%; /* Adjust image size whenever needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/*Contact page style*/
+.form-parent {
+    /*    text-align: center;*/
+    max-width: 25%;
+    margin: auto;
+}
+.form-group {
+    margin-bottom: 15px; /* Space between form groups */
+}
+
+label {
+    display: block; /* Make labels block elements */
+    margin-bottom: 5px; /* Space below labels */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    /*    width: 50%; !* Full-width inputs *!*/
+    width: 100%; /* Full-width inputs */
+    padding: 10px; /* Padding inside inputs */
+    border: 1px solid #ccc; /* Border styling */
+    border-radius: 5px; /* Rounded corners */
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+.button-container {
+    width: 100%;
+    text-align: center;
+}
+.submit-button {
+    background-color: #A04C4C; /* Button color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding */
+    cursor: pointer; /* Pointer cursor on hover */
+    width: 50%; /* Full-width button */
+    font-size: 16px; /* Font size */
+}
+
+.submit-button:hover {
+    background-color: #40e0d0; /* Lighter shade on hover */
+}
+
+
+/*Queries*/
+
+@media (min-width: 600px) {
+    nav a {
+        font-size: 18px; /* Larger size for wider screens */
+    }
+}
+
+@media (min-width: 900px) {
+    nav a {
+        font-size: 24px; /* Even larger for very wide screens */
+    }
+}
+
+/*Gallery style queries*/
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-container {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+}
+
+
+/*Projects style queries*/
+
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px); /* Two cards in a row on smaller screens */
+    }
+
+    .cards-container {
+        flex-wrap: wrap; /* This allow cards to wrap to the next line */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%; /* Single card on very small screens */
+    }
+    .cards-container {
+        flex-wrap: wrap; /* This allow cards to wrap to the next line */
+    }
+
+    /*For the form*/
+    .form-parent {
+        max-width: 100%;
+    }
+    .submit-button {
+        width: 100%; /* Full-width button */
+    }
+
+    /*For home page*/
+    .center-sec {
+        width: 100%;
+        margin: auto;
+        margin-top: 5%;
+    }
+    /*For footer*/
+    .footer-content {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    /*    footer a {*/
+    /*        margin-bottom: 15px;*/
+    /*    }*/
+
+    .footer-links li {
+        margin: 0 10px 30px;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+        justify-content: space-between;
+    }
+
+    .social-icons {
+        width: 100%;
+        margin-bottom: 15px;
+        justify-content: space-between;
+    }
+
+}

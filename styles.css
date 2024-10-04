@@ -13,7 +13,8 @@ main {
 body {
     display: flex; /* Using flexbox for layout */
     flex-direction: column; /* Stack children vertically, this means all the content */
-    background-color: #ffc0cc; /* Light pink background */
+/*    background-color: #ffc0cc; !* Light pink background *!*/
+    background-color: #ffffff; /* Light pink background */
     color: #0d420b; /* Dark green text */
     font-family: Arial, sans-serif;
     margin: 0;
